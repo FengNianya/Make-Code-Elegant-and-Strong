@@ -1,0 +1,46 @@
+{
+  "name": "elegant",
+  "version": "1.0.0",
+  "description": "make code elegant and strong",
+  "main": "",
+  "author": "fengshangwuqi",
+  "license": "ISC",
+  "keywords": [
+    "code",
+    "format",
+    "check",
+    "test",
+    "elegant",
+    "strong"
+  ],
+  "scripts": {
+    "clean": "rimraf *.log .DS_Store dist",
+    "test": "npm run clean && mkdir dist && mocha",
+    "lint:css": "stylelint 'css/*.css'",
+    "lint:js": "eslint js",
+    "lint-fix": "eslint --fix js",
+    "lint": "npm run lint:css && npm run lint:js",
+    "start": "browser-sync start --server --files '*.html, css/*.css, js/*.js'",
+    "precommit": "lint-staged",
+    "commitmsg": "validate-commit-msg"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-register": "^6.24.1",
+    "browser-sync": "^2.18.12",
+    "chai": "^4.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0",
+    "husky": "^0.13.3",
+    "lint-staged": "^3.4.2",
+    "mocha": "^3.4.1",
+    "mochawesome": "^2.2.0",
+    "prettier": "^1.3.1",
+    "rimraf": "^2.6.1",
+    "stylelint": "^7.10.1",
+    "validate-commit-msg": "^2.12.1"
+  }
+}

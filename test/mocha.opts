@@ -1,0 +1,6 @@
+
+--recursive
+--growl
+--reporter mochawesome --reporter-options reportDir=dist/mochawesome-report
+--require babel-polyfill
+--compilers js:babel-register

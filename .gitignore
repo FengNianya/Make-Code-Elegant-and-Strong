@@ -1,0 +1,14 @@
+
+# Logs
+*.log
+
+# Dependency directory
+node_modules/
+
+# WebStorm
+*.idea/
+
+# Mac
+.DS_Store
+
+dist
